@@ -27328,7 +27328,7 @@ const MainView = ()=>{
                 Bio: "Sir David Lean CBE (25 March 1908 – 16 April 1991) was an English film director, producer, screenwriter and editor. Widely considered one of the most important figures in British cinema, Lean directed the large-scale epics The Bridge on the River Kwai (1957), Lawrence of Arabia (1962), Doctor Zhivago (1965), and A Passage to India (1984).[1] He also directed the film adaptations of two Charles Dickens novels, Great Expectations (1946) and Oliver Twist (1948), as well as the romantic drama Brief Encounter (1945).",
                 Birthday: {
                     "$date": {
-                        "numberLong": "-1949356800000"
+                        "$numberLong": "-1949356800000"
                     }
                 },
                 Death: "1991-04-16"
@@ -27418,7 +27418,7 @@ const MainView = ()=>{
         columnNumber: 9
     }, undefined);
 };
-_s(MainView, "Q+YsasR97/YpgGd6KipVgpYKNqg=");
+_s(MainView, "zjESlMBrROgkyTZQbgJnSHn+KV4=");
 _c = MainView;
 var _c;
 $RefreshReg$(_c, "MainView");
@@ -27587,7 +27587,7 @@ const MovieView = ({ movie, onBackClick })=>{
                                 columnNumber: 17
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                children: movie.Director.Birthday.$date.numberLong
+                                children: movie.Director.Birthday.$date.$numberLong
                             }, void 0, false, {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 20,
