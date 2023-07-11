@@ -27330,7 +27330,7 @@ const MainView = ()=>{
         }).then((response)=>response.json()).then((fetchedMovies)=>{
             const moviesFromApi = fetchedMovies.map((doc)=>{
                 return {
-                    Id: doc.key,
+                    Id: doc._id,
                     Title: doc.Title,
                     Description: doc.Description,
                     GenreName: doc.Genre.Name,
