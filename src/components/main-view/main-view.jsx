@@ -3,6 +3,10 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import { NavigationFlixClient } from "../navigation-view/navigation";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import HeadingView from "../heading-view/heading-view";
 
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -43,80 +47,68 @@ export const MainView = () => {
       });
   }, [token]);
 
-  if (!user) {
-    return (
-      <>
-        <LoginView
-          onLoggedIn={(user, token) => {
-            setUser(user);
-            setToken(token);
-          }}
-        />
-        or
-        <SignupView />
-      </>
-    );
-  }
-
-  if (selectedMovie) {
-    return (
-      <>
-        <button
-          onClick={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-          }}
-        >
-          Logout
-        </button>
-        <MovieView
-          movie={selectedMovie}
-          onBackClick={() => setSelectedMovie(null)}
-        />
-      </>
-    );
-  }
-
-  if (movies.length === 0) {
-    return (
-      <>
-        <button
-          onClick={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-          }}
-        >
-          Logout
-        </button>
-        <div>The List is empty.</div>
-      </>
-    );
-  }
-
   return (
-    <div>
-      <button
-        onClick={() => {
-          setUser(null);
-          setToken(null);
-          localStorage.clear();
-        }}
-      >
-        Logout
-      </button>
-      {movies.map((movie) => {
-        return (
-          <MovieCard
-            key={movie.Id}
-            movie={movie}
-            onMovieClick={(newSelectedMovie) => {
-              setSelectedMovie(newSelectedMovie);
-            }}
-          />
-        );
-      })}
-    </div>
+    <>
+      <Row className="justify-content-md-center">
+        {!user ? (
+          <Col md={4}>
+            <HeadingView marginVar="mb-5" title="MyFlix Movie Database" />
+            <HeadingView title="Login" />
+            <LoginView
+              onLoggedIn={(user, token) => {
+                setUser(user);
+                setToken(token);
+              }}
+            />
+            <HeadingView title="Signup" />
+            <SignupView />
+          </Col>
+        ) : selectedMovie ? (
+          <>
+            <NavigationFlixClient
+              onLoggedOut={() => {
+                setUser(null);
+                setToken(null);
+                setSelectedMovie(null), localStorage.clear();
+              }}
+            />
+            <Col md={8}>
+              <MovieView movie={selectedMovie} />
+            </Col>
+          </>
+        ) : movies.length === 0 ? (
+          <>
+            <NavigationFlixClient
+              onLoggedOut={() => {
+                setUser(null);
+                setToken(null);
+                setSelectedMovie(null), localStorage.clear();
+              }}
+            />
+            <div>The List is empty.</div>
+          </>
+        ) : (
+          <>
+            <NavigationFlixClient
+              onLoggedOut={() => {
+                setUser(null);
+                setToken(null);
+                setSelectedMovie(null), localStorage.clear();
+              }}
+            />
+            {movies.map((movie) => (
+              <Col md={2} className="mb-5" key={movie.Id}>
+                <MovieCard
+                  movie={movie}
+                  onMovieClick={(newSelectedMovie) => {
+                    setSelectedMovie(newSelectedMovie);
+                  }}
+                />
+              </Col>
+            ))}
+          </>
+        )}
+      </Row>
+    </>
   );
 };

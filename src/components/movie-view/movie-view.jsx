@@ -1,51 +1,31 @@
-export const MovieView = ({ movie, onBackClick }) => {
+//import "./movie-view.scss";
+import HeadingView from "../heading-view/heading-view";
+import InfoView from "../infoAccord-view/infoAccord-view";
+
+export const MovieView = ({ movie }) => {
   return (
-    <>
+    <div>
+      <HeadingView title={movie.Title} />
       <div>
-        <img src={movie.ImagePath} />
-      </div>
-      <div>
-        <span>Title:</span>
-        <span>{movie.Title}</span>
-      </div>
-      <div>
-        <span>Poster:</span>
         <span>
-          <img src={movie.Image} alt="Poster of the movie" />
+          <img
+            src={movie.Image}
+            className="w-100 border-secondary mb-3"
+            alt="movie poster"
+          />
         </span>
       </div>
       <div>
-        <span>Director:</span>
-        <span>{movie.DirectorName}</span>
+        <InfoView
+          name={movie.DirectorName}
+          bio={movie.DirectorBio}
+          birth={movie.DirectorBirthday}
+          death={movie.DirectorDeath}
+          genreName={movie.GenreName}
+          description={movie.GenreDescription}
+          featured={movie.Featured}
+        />
       </div>
-      <span>Biography of the Director:</span>
-      <span>{movie.DirectorBio}</span>
-      <div>
-        <div>
-          <span>Birthday:</span>
-          <span>{movie.DirectorBirthday}</span>
-          <div>
-            <span>Death:</span>
-            <span>{movie.DirectorDeath}</span>
-          </div>
-        </div>
-        <span>Description of the movie:</span>
-        <span>{movie.Description}</span>
-      </div>
-      <div>
-        <span>Genre:</span>
-        <span>{movie.GenreName}</span>
-      </div>
-      <div>
-        <span>About the Genre:</span>
-        <span>{movie.GenreDescription}</span>
-      </div>
-      <div>
-        <span>Featured:</span>
-        <span>{movie.Featured}</span>
-      </div>
-
-      <button onClick={onBackClick}>Back</button>
-    </>
+    </div>
   );
 };
