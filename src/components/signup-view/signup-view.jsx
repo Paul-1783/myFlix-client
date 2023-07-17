@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-export const SignupView = () => {
+export const SignupView = ({ onSignedUp }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -18,12 +18,12 @@ export const SignupView = () => {
       birtdhay: birthday,
     };
 
-    fetch("SIGNUP_URL", {
+    fetch("https://myflicsdb3.onrender.com/users", {
       method: "POST",
-      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
         alert("Signup successfull");

@@ -50,7 +50,7 @@ export const MainView = () => {
   return (
     <>
       <Row className="justify-content-md-center">
-        {!user ? (
+        {!user && !token ? (
           <Col md={4}>
             <HeadingView marginVar="mb-5" title="MyFlix Movie Database" />
             <HeadingView title="Login" />
@@ -61,7 +61,7 @@ export const MainView = () => {
               }}
             />
             <HeadingView title="Signup" />
-            <SignupView />
+            <SignupView onSignedUp={(user) => setUser(user)} />
           </Col>
         ) : selectedMovie ? (
           <>
