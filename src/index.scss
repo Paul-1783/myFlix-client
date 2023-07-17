@@ -1,5 +1,31 @@
-$color: steelblue;
+$primary:  PaleGoldenrod;
+$secondary: NavajoWhite;
+$info: PaleGreen;
+$light: MintCream;
+$dark: MidnightBlue;
+$warning: MediumVioletRed;
 
-.my-flix {
-    color: $color;
-}
+$body-text-align:  $dark;
+$body-color: $dark;
+$body-bg: $dark;
+
+$accordion-color: $warning;
+$accordion-bg: $secondary;
+$accordion-button-color: $dark;
+
+
+$form-label-font-size: 1.6rem;
+$form-label-color: $primary;
+$form-label-font-style: sans-serif;
+ 
+$input-bg: $secondary;
+$badge-color: $light; 
+
+$badge-font-size: 0.8em;
+$badge-font-weight: bold;
+
+$nav-link-color: $secondary;
+$nav-link-font-size: 1.4rem;
+ 
+
+@import '~bootstrap/scss/bootstrap.scss';
