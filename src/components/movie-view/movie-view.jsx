@@ -1,8 +1,13 @@
 //import "./movie-view.scss";
 import HeadingView from "../heading-view/heading-view";
 import InfoView from "../infoAccord-view/infoAccord-view";
+import { useParams } from "react-router";
 
-export const MovieView = ({ movie }) => {
+export const MovieView = ({ movies }) => {
+  const { movieId } = useParams();
+
+  const movie = movies.find((b) => b._id === movieId);
+
   return (
     <div>
       <HeadingView title={movie.Title} />

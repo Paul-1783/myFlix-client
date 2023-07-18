@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-export const MovieCard = ({ movie, onMovieClick }) => {
+export const MovieCard = ({ movie }) => {
   return (
     <Card className="h-100">
       <Card.Img variant="top" src={movie.Image} className="h-100 w-100" />
@@ -9,13 +10,9 @@ export const MovieCard = ({ movie, onMovieClick }) => {
         <Card.Title></Card.Title>
         <Card.Text></Card.Text>
       </Card.Body>
-      <Button
-        onClick={() => {
-          onMovieClick(movie);
-        }}
-      >
-        {movie.Title}
-      </Button>
+      <Link to={`/movies/${encodeURIComponent(movie.Id)}`}>
+        <Button variant="link">{movie.Title}</Button>
+      </Link>
     </Card>
   );
 };
@@ -35,5 +32,4 @@ MovieCard.propTypes = {
     DirectorDeath: PropTypes.string,
     Actors: PropTypes.array.isRequired,
   }).isRequired,
-  onMovieClick: PropTypes.func.isRequired,
 };
