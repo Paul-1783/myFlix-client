@@ -1,27 +1,37 @@
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
-export const NavigationFlixClient = ({ onLoggedOut }) => {
-  const storedUser = JSON.parse(localStorage.getItem("user"));
-  const storedToken = localStorage.getItem("token");
-
-  const handleSelect = (eventKey) => {};
-
+export const NavigationFlixClient = ({ user, onLoggedOut }) => {
   return (
-    <Nav className="bg-warning" variant="pills" onSelect={handleSelect}>
-      <Nav.Item>
-        <Nav.Link eventKey="1" href="./src/components/movie-view/movie-view">
-          Back to Movielist
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item
-        onClick={() => {
-          onLoggedOut();
-        }}
-      >
-        <Nav.Link eventKey="2" title="Item">
-          Logout
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand as={Link}>MyFilx Movie Client</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            {!user ? (
+              <>
+                <Nav.Link as={Link} to="/Login">
+                  Login
+                </Nav.Link>
+                <Nav.Link as={Link} to="/Signup">
+                  Signup
+                </Nav.Link>
+              </>
+            ) : (
+              <>
+                <Nav.Link as={Link} to="/">
+                  Back to Movielist
+                </Nav.Link>
+                <Nav.Link onClick={onLoggedOut}>Logout</Nav.Link>
+                <Nav.Link to="/profile">Profile</Nav.Link>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };

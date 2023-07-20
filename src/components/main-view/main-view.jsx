@@ -50,6 +50,14 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
+      <NavigationFlixClient
+        user={(user) => setUser(user)}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          localStorage.clear();
+        }}
+      />
       <Row className="justify-content-md-center">
         <Routes>
           <Route
@@ -92,7 +100,7 @@ export const MainView = () => {
             }
           />
           <Route
-            path="/"
+            path="/movies/:movieId"
             element={
               <>
                 {!user ? (
