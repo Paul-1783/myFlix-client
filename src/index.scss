@@ -5,6 +5,9 @@ $light: MintCream;
 $dark: MidnightBlue;
 $warning: MediumVioletRed;
 
+$btn-color: $warning;
+$btn-link-color: $secondary; 
+
 $body-text-align:  $dark;
 $body-color: $dark;
 $body-bg: $dark;
@@ -13,19 +16,20 @@ $accordion-color: $warning;
 $accordion-bg: $secondary;
 $accordion-button-color: $dark;
 
-
 $form-label-font-size: 1.6rem;
 $form-label-color: $primary;
-$form-label-font-style: sans-serif;
- 
+
 $input-bg: $secondary;
-$badge-color: $light; 
+
+$form-label-font-style: sans-serif;
+
+$badge-color: $primary; 
 
 $badge-font-size: 0.8em;
 $badge-font-weight: bold;
 
 $nav-link-color: $secondary;
 $nav-link-font-size: 1.4rem;
- 
+$navbar-dark-color: $warning;
 
 @import '~bootstrap/scss/bootstrap.scss';

@@ -1,4 +1,4 @@
-//import "./movie-view.scss";
+import React from "react";
 import HeadingView from "../heading-view/heading-view";
 import InfoView from "../infoAccord-view/infoAccord-view";
 import { useParams } from "react-router";
@@ -10,7 +10,7 @@ export const MovieView = ({ movies }) => {
 
   return (
     <div>
-      <HeadingView title={movie.Title} />
+      <HeadingView title={movie.Title} marginVar="mt-3" />
       <div>
         <span>
           <img
@@ -27,8 +27,9 @@ export const MovieView = ({ movies }) => {
           birth={movie.DirectorBirthday}
           death={movie.DirectorDeath}
           genreName={movie.GenreName}
-          description={movie.GenreDescription}
+          genreDescription={movie.GenreDescription}
           featured={movie.Featured}
+          description={movie.Description}
         />
       </div>
     </div>

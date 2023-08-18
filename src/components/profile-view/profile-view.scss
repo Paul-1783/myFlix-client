@@ -1,0 +1,21 @@
+$primary: PaleGoldenrod;
+$secondary: NavajoWhite;
+$info: PaleGreen;
+$light: MintCream;
+$dark: MidnightBlue;
+$warning: MediumVioletRed;
+
+ 
+ 
+Button {
+     width : 100%;
+}
+
+
+Button.hover-effect:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in-out transform;
+    background-color: $info;
+}
+
+ 
