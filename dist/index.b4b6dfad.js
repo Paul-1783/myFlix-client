@@ -27658,7 +27658,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../movie-view/movie-view":"ggaUx","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","../navigation-view/navigation-view":"kTFuP","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../heading-view/heading-view":"bmjVx","react-router-dom":"9xmpe","../profile-view/profile-view":"2vVqf","../setting-view/setting-birthday-view":"2gkJE","../setting-view/setting-email-view":"ihO1r","../setting-view/setting-pw-view":"1jY5c","../setting-view/setting-name-view":"cZPih"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../movie-view/movie-view":"ggaUx","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../heading-view/heading-view":"bmjVx","../navigation-view/navigation-view":"kTFuP","react-router-dom":"9xmpe","../profile-view/profile-view":"2vVqf","../setting-view/setting-birthday-view":"2gkJE","../setting-view/setting-email-view":"ihO1r","../setting-view/setting-pw-view":"1jY5c","../setting-view/setting-name-view":"cZPih"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27848,7 +27848,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","prop-types":"7wKI2","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"9xmpe"}],"7Rzro":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","prop-types":"7wKI2","react-bootstrap":"3AD9A","react":"21dqq","react-router-dom":"9xmpe"}],"7Rzro":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -47158,7 +47158,7 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","react":"21dqq","../heading-view/heading-view":"bmjVx","../infoAccord-view/infoAccord-view":"5xeJS","react-router":"dbWyW"}],"bmjVx":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../heading-view/heading-view":"bmjVx","../infoAccord-view/infoAccord-view":"5xeJS","react":"21dqq","react-router":"dbWyW"}],"bmjVx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1c46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
