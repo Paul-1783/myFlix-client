@@ -27658,7 +27658,7 @@ $RefreshReg$(_c, "MainView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../movie-view/movie-view":"ggaUx","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../heading-view/heading-view":"bmjVx","react-router-dom":"9xmpe","../navigation-view/navigation-view":"kTFuP","../setting-view/setting-birthday-view":"2gkJE","../setting-view/setting-email-view":"ihO1r","../setting-view/setting-name-view":"cZPih","../setting-view/setting-pw-view":"1jY5c","../profile-view/profile-view":"2vVqf"}],"bwuIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../movie-card/movie-card":"bwuIu","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../movie-view/movie-view":"ggaUx","../login-view/login-view":"9YtA0","../signup-view/signup-view":"4OGiN","../navigation-view/navigation-view":"kTFuP","react-bootstrap/Row":"cMC39","react-bootstrap/Col":"2L2I6","../heading-view/heading-view":"bmjVx","react-router-dom":"9xmpe","../profile-view/profile-view":"2vVqf","../setting-view/setting-birthday-view":"2gkJE","../setting-view/setting-email-view":"ihO1r","../setting-view/setting-pw-view":"1jY5c","../setting-view/setting-name-view":"cZPih"}],"bwuIu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$67b2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27848,7 +27848,7 @@ $RefreshReg$(_c, "MovieCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","prop-types":"7wKI2","react-bootstrap":"3AD9A","react-router-dom":"9xmpe","react":"21dqq"}],"7Rzro":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","prop-types":"7wKI2","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"9xmpe"}],"7Rzro":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -47158,7 +47158,7 @@ $RefreshReg$(_c, "MovieView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","../heading-view/heading-view":"bmjVx","../infoAccord-view/infoAccord-view":"5xeJS","react-router":"dbWyW","react":"21dqq"}],"bmjVx":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","react":"21dqq","../heading-view/heading-view":"bmjVx","../infoAccord-view/infoAccord-view":"5xeJS","react-router":"dbWyW"}],"bmjVx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1c46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -47834,691 +47834,7 @@ $RefreshReg$(_c, "NavigationFlixClient");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Nav":"cXyL2","react-bootstrap/Navbar":"1mHjo","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","./navigation-view.scss":"9kk9q"}],"9kk9q":[function() {},{}],"2gkJE":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5eb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5eb5.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SetBirthdayView", ()=>SetBirthdayView);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactBootstrap = require("react-bootstrap");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _settingViewScss = require("./setting-view.scss");
-var _s = $RefreshSig$();
-const SetBirthdayView = ({ user, token, setUser })=>{
-    _s();
-    // console.log("User: ", user.username);
-    // console.log("token: ", token);
-    // console.log("setuser: ", setUser);
-    const [Birthday, setBirthday] = (0, _react.useState)(user.birthday);
-    const [Password, setPassword] = (0, _react.useState)("");
-    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
-    const handleSubmit = (event)=>{
-        event.preventDefault();
-        if (ControlPassword === Password) {
-            const data = {
-                username: user.username,
-                password: Password,
-                email: user.email,
-                birthday: Birthday
-            };
-            // console.log("birthday", data);
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
-                method: "PUT",
-                body: JSON.stringify(data),
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                }
-            }).then((response)=>{
-                // console.log("RESPONSE: ", response.json()); // why not logged in console?
-                return response.json();
-            }).then((data)=>{
-                console.log("Update response: " + data);
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data));
-                    setUser(data);
-                    alert("Successfully updated!");
-                } else {
-                    console.log("data: ", data);
-                    alert("user in current session not yet locally updated");
-                }
-            }).catch((e)=>{
-                console.log("error, ", e);
-                alert("Something went wrong.");
-            });
-        } else {
-            alert("Entered Passwords weren't identical.");
-            return;
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
-            onSubmit: handleSubmit,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
-                        controlId: "formBasicEmail",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Change date of birth here:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 67,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "date",
-                                value: Birthday,
-                                placeholder: user.birthday,
-                                onChange: (e)=>setBirthday(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 77,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Password,
-                                onChange: (e)=>setPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 78,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password confirm:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 84,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: ControlPassword,
-                                onChange: (e)=>setControlPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 85,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                        lineNumber: 66,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                    lineNumber: 65,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                        className: "text-dark btn-lg border-dark hover-effect",
-                        type: "submit",
-                        children: "Submit"
-                    }, void 0, false, {
-                        fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                        lineNumber: 94,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                    lineNumber: 93,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/setting-view/setting-birthday-view.jsx",
-            lineNumber: 64,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/setting-view/setting-birthday-view.jsx",
-        lineNumber: 63,
-        columnNumber: 5
-    }, undefined);
-};
-_s(SetBirthdayView, "dZ0uFJW6RxrmhJGabmuU0FC0AGo=");
-_c = SetBirthdayView;
-var _c;
-$RefreshReg$(_c, "SetBirthdayView");
-
-  $parcel$ReactRefreshHelpers$5eb5.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","./setting-view.scss":"g0BYC","react":"21dqq"}],"g0BYC":[function() {},{}],"ihO1r":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b438 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b438.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SetEmailView", ()=>SetEmailView);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactBootstrap = require("react-bootstrap");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _settingViewScss = require("./setting-view.scss");
-var _s = $RefreshSig$();
-const SetEmailView = ({ user, token, setUser })=>{
-    _s();
-    // console.log("User: ", user.username);
-    // console.log("token: ", token);
-    // console.log("setuser: ", setUser);
-    const [Email, setEmail] = (0, _react.useState)(user.email);
-    const [Password, setPassword] = (0, _react.useState)("");
-    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
-    const handleSubmit = (event)=>{
-        event.preventDefault();
-        if (ControlPassword === Password) {
-            const data = {
-                username: user.username,
-                password: Password,
-                email: Email,
-                birthday: user.birthday
-            };
-            // console.log("birthday", data);
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
-                method: "PUT",
-                body: JSON.stringify(data),
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                }
-            }).then((response)=>{
-                // console.log("RESPONSE: ", response.json()); // why not logged in console?
-                return response.json();
-            }).then((data)=>{
-                console.log("Update response: " + data);
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data));
-                    setUser(data);
-                    alert("Successfully updated!");
-                } else {
-                    console.log("data: ", data);
-                    alert("user in current session not yet locally updated");
-                }
-            }).catch((e)=>{
-                console.log("error, ", e);
-                alert("Something went wrong.");
-            });
-        } else {
-            alert("Entered Passwords weren't identical.");
-            return;
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
-            onSubmit: handleSubmit,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
-                        controlId: "formBasicEmail",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Enter new Email here:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 67,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Email,
-                                placeholder: user.email,
-                                onChange: (e)=>setEmail(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 68,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 75,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Password,
-                                onChange: (e)=>setPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 76,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password confirm:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 82,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: ControlPassword,
-                                onChange: (e)=>setControlPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 83,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/setting-view/setting-email-view.jsx",
-                        lineNumber: 66,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-email-view.jsx",
-                    lineNumber: 65,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                        className: "text-dark btn-lg border-dark hover-effect",
-                        type: "submit",
-                        children: "Submit"
-                    }, void 0, false, {
-                        fileName: "src/components/setting-view/setting-email-view.jsx",
-                        lineNumber: 92,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-email-view.jsx",
-                    lineNumber: 91,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/setting-view/setting-email-view.jsx",
-            lineNumber: 64,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/setting-view/setting-email-view.jsx",
-        lineNumber: 63,
-        columnNumber: 5
-    }, undefined);
-};
-_s(SetEmailView, "3MwB921xuq6NUE/X3ls+PyHFL94=");
-_c = SetEmailView;
-var _c;
-$RefreshReg$(_c, "SetEmailView");
-
-  $parcel$ReactRefreshHelpers$b438.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","./setting-view.scss":"g0BYC","react":"21dqq"}],"g0BYC":[function() {},{}],"cZPih":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2b83 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2b83.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SetNameView", ()=>SetNameView);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactBootstrap = require("react-bootstrap");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _settingViewScss = require("./setting-view.scss");
-var _s = $RefreshSig$();
-const SetNameView = ({ user, token, setUser })=>{
-    _s();
-    // console.log("User: ", user.username);
-    // console.log("token: ", token);
-    // console.log("setuser: ", setUser);
-    const [Username, setUsername] = (0, _react.useState)(user.username);
-    const [Password, setPassword] = (0, _react.useState)("");
-    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
-    const handleSubmit = (event)=>{
-        event.preventDefault();
-        if (ControlPassword === Password) {
-            const data = {
-                username: Username,
-                password: Password,
-                email: user.email,
-                birthday: user.birthday
-            };
-            // console.log("birthday", data);
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
-                method: "PUT",
-                body: JSON.stringify(data),
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                }
-            }).then((response)=>{
-                // console.log("RESPONSE: ", response.json()); // why not logged in console?
-                return response.json();
-            }).then((data)=>{
-                console.log("Update response: " + data);
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data));
-                    setUser(data);
-                    alert("Successfully updated!");
-                } else {
-                    console.log("data: ", data);
-                    alert("user in current session not yet locally updated");
-                }
-            }).catch((e)=>{
-                console.log("error, ", e);
-                alert("Something went wrong.");
-            });
-        } else {
-            alert("Entered Passwords weren't identical.");
-            return;
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
-            onSubmit: handleSubmit,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
-                        controlId: "formBasicEmail",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Enter new username here:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 67,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Username,
-                                placeholder: user.username,
-                                onChange: (e)=>setUsername(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 77,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Password,
-                                onChange: (e)=>setPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 78,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Password confirm:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 84,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: ControlPassword,
-                                onChange: (e)=>setControlPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 85,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/setting-view/setting-name-view.jsx",
-                        lineNumber: 66,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-name-view.jsx",
-                    lineNumber: 65,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                        className: "text-dark btn-lg border-dark hover-effect",
-                        type: "submit",
-                        children: "Submit"
-                    }, void 0, false, {
-                        fileName: "src/components/setting-view/setting-name-view.jsx",
-                        lineNumber: 94,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-name-view.jsx",
-                    lineNumber: 93,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/setting-view/setting-name-view.jsx",
-            lineNumber: 64,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/setting-view/setting-name-view.jsx",
-        lineNumber: 63,
-        columnNumber: 5
-    }, undefined);
-};
-_s(SetNameView, "9067hWRl5yVs4PFGfDqAZhTpxFY=");
-_c = SetNameView;
-var _c;
-$RefreshReg$(_c, "SetNameView");
-
-  $parcel$ReactRefreshHelpers$2b83.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","react-bootstrap":"3AD9A","./setting-view.scss":"g0BYC","react":"21dqq"}],"g0BYC":[function() {},{}],"1jY5c":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7d61 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7d61.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SetPwView", ()=>SetPwView);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactBootstrap = require("react-bootstrap");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _settingViewScss = require("./setting-view.scss");
-var _s = $RefreshSig$();
-const SetPwView = ({ user, token, setUser })=>{
-    _s();
-    // console.log("User: ", user.username);
-    // console.log("token: ", token);
-    // console.log("setuser: ", setUser);
-    const [Password, setPassword] = (0, _react.useState)("");
-    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
-    const handleSubmit = (event)=>{
-        event.preventDefault();
-        if (ControlPassword === Password) {
-            const data = {
-                username: user.username,
-                password: Password,
-                email: user.email,
-                birthday: user.birthday
-            };
-            // console.log("birthday", data);
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
-                method: "PUT",
-                body: JSON.stringify(data),
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                }
-            }).then((response)=>{
-                // console.log("RESPONSE: ", response.json()); // why not logged in console?
-                return response.json();
-            }).then((data)=>{
-                console.log("Update response: " + data);
-                if (data) {
-                    localStorage.setItem("user", JSON.stringify(data));
-                    setUser(data);
-                    alert("Successfully updated!");
-                } else {
-                    console.log("data: ", data);
-                    alert("user in current session not yet locally updated");
-                }
-            }).catch((e)=>{
-                console.log("error, ", e);
-                alert("Something went wrong.");
-            });
-        } else {
-            alert("Entered Passwords weren't identical.");
-            return;
-        }
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
-            onSubmit: handleSubmit,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
-                        controlId: "formBasicEmail",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "New Password:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 66,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: Password,
-                                onChange: (e)=>setPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 67,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
-                                className: "mt-5 mb-5",
-                                children: "Please confirm new Password:"
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 73,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
-                                type: "text",
-                                value: ControlPassword,
-                                onChange: (e)=>setControlPassword(e.target.value),
-                                required: true
-                            }, void 0, false, {
-                                fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 76,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/setting-view/setting-pw-view.jsx",
-                        lineNumber: 65,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-pw-view.jsx",
-                    lineNumber: 64,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
-                    className: "d-flex justify-content-center mt-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                        className: "text-dark btn-lg border-dark hover-effect",
-                        type: "submit",
-                        children: "Submit"
-                    }, void 0, false, {
-                        fileName: "src/components/setting-view/setting-pw-view.jsx",
-                        lineNumber: 85,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/setting-view/setting-pw-view.jsx",
-                    lineNumber: 84,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/setting-view/setting-pw-view.jsx",
-            lineNumber: 63,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/setting-view/setting-pw-view.jsx",
-        lineNumber: 62,
-        columnNumber: 5
-    }, undefined);
-};
-_s(SetPwView, "V2pr8EaSzzsSHDTJZ5yG3yeaz60=");
-_c = SetPwView;
-var _c;
-$RefreshReg$(_c, "SetPwView");
-
-  $parcel$ReactRefreshHelpers$7d61.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC","./setting-view.scss":"g0BYC","react":"21dqq"}],"g0BYC":[function() {},{}],"2vVqf":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap/Nav":"cXyL2","react-bootstrap/Navbar":"1mHjo","react-router-dom":"9xmpe","./navigation-view.scss":"9kk9q","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"9kk9q":[function() {},{}],"2vVqf":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3c12 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -48950,6 +48266,690 @@ $RefreshReg$(_c, "DeleteModal");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./modaledelete.scss":"a4by8","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Modal":"aNVmp","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"a4by8":[function() {},{}],"eyKYH":[function() {},{}]},["ftGig","gYaYa","d8Dch"], "d8Dch", "parcelRequireaec4")
+},{"react/jsx-dev-runtime":"iTorj","./modaledelete.scss":"a4by8","react":"21dqq","react-bootstrap/Button":"aPzUt","react-bootstrap/Modal":"aNVmp","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"a4by8":[function() {},{}],"eyKYH":[function() {},{}],"2gkJE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5eb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5eb5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SetBirthdayView", ()=>SetBirthdayView);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactBootstrap = require("react-bootstrap");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _settingViewScss = require("./setting-view.scss");
+var _s = $RefreshSig$();
+const SetBirthdayView = ({ user, token, setUser })=>{
+    _s();
+    // console.log("User: ", user.username);
+    // console.log("token: ", token);
+    // console.log("setuser: ", setUser);
+    const [Birthday, setBirthday] = (0, _react.useState)(user.birthday);
+    const [Password, setPassword] = (0, _react.useState)("");
+    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
+    const handleSubmit = (event)=>{
+        event.preventDefault();
+        if (ControlPassword === Password) {
+            const data = {
+                username: user.username,
+                password: Password,
+                email: user.email,
+                birthday: Birthday
+            };
+            // console.log("birthday", data);
+            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                }
+            }).then((response)=>{
+                // console.log("RESPONSE: ", response.json()); // why not logged in console?
+                return response.json();
+            }).then((data)=>{
+                console.log("Update response: " + data);
+                if (data) {
+                    localStorage.setItem("user", JSON.stringify(data));
+                    setUser(data);
+                    alert("Successfully updated!");
+                } else {
+                    console.log("data: ", data);
+                    alert("user in current session not yet locally updated");
+                }
+            }).catch((e)=>{
+                console.log("error, ", e);
+                alert("Something went wrong.");
+            });
+        } else {
+            alert("Entered Passwords weren't identical.");
+            return;
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
+            onSubmit: handleSubmit,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
+                        controlId: "formBasicEmail",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Change date of birth here:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "date",
+                                value: Birthday,
+                                placeholder: user.birthday,
+                                onChange: (e)=>setBirthday(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 70,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 77,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Password,
+                                onChange: (e)=>setPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 78,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password confirm:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 84,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: ControlPassword,
+                                onChange: (e)=>setControlPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                                lineNumber: 85,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                        lineNumber: 66,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                    lineNumber: 65,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        className: "text-dark btn-lg border-dark hover-effect",
+                        type: "submit",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                        lineNumber: 94,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-birthday-view.jsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/setting-view/setting-birthday-view.jsx",
+            lineNumber: 64,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/setting-view/setting-birthday-view.jsx",
+        lineNumber: 63,
+        columnNumber: 5
+    }, undefined);
+};
+_s(SetBirthdayView, "dZ0uFJW6RxrmhJGabmuU0FC0AGo=");
+_c = SetBirthdayView;
+var _c;
+$RefreshReg$(_c, "SetBirthdayView");
+
+  $parcel$ReactRefreshHelpers$5eb5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react":"21dqq","./setting-view.scss":"g0BYC","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"g0BYC":[function() {},{}],"ihO1r":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b438 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b438.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SetEmailView", ()=>SetEmailView);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactBootstrap = require("react-bootstrap");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _settingViewScss = require("./setting-view.scss");
+var _s = $RefreshSig$();
+const SetEmailView = ({ user, token, setUser })=>{
+    _s();
+    // console.log("User: ", user.username);
+    // console.log("token: ", token);
+    // console.log("setuser: ", setUser);
+    const [Email, setEmail] = (0, _react.useState)(user.email);
+    const [Password, setPassword] = (0, _react.useState)("");
+    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
+    const handleSubmit = (event)=>{
+        event.preventDefault();
+        if (ControlPassword === Password) {
+            const data = {
+                username: user.username,
+                password: Password,
+                email: Email,
+                birthday: user.birthday
+            };
+            // console.log("birthday", data);
+            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                }
+            }).then((response)=>{
+                // console.log("RESPONSE: ", response.json()); // why not logged in console?
+                return response.json();
+            }).then((data)=>{
+                console.log("Update response: " + data);
+                if (data) {
+                    localStorage.setItem("user", JSON.stringify(data));
+                    setUser(data);
+                    alert("Successfully updated!");
+                } else {
+                    console.log("data: ", data);
+                    alert("user in current session not yet locally updated");
+                }
+            }).catch((e)=>{
+                console.log("error, ", e);
+                alert("Something went wrong.");
+            });
+        } else {
+            alert("Entered Passwords weren't identical.");
+            return;
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
+            onSubmit: handleSubmit,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
+                        controlId: "formBasicEmail",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Enter new Email here:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Email,
+                                placeholder: user.email,
+                                onChange: (e)=>setEmail(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 68,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 75,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Password,
+                                onChange: (e)=>setPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 76,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password confirm:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 82,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: ControlPassword,
+                                onChange: (e)=>setControlPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-email-view.jsx",
+                                lineNumber: 83,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/setting-view/setting-email-view.jsx",
+                        lineNumber: 66,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-email-view.jsx",
+                    lineNumber: 65,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        className: "text-dark btn-lg border-dark hover-effect",
+                        type: "submit",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/setting-view/setting-email-view.jsx",
+                        lineNumber: 92,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-email-view.jsx",
+                    lineNumber: 91,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/setting-view/setting-email-view.jsx",
+            lineNumber: 64,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/setting-view/setting-email-view.jsx",
+        lineNumber: 63,
+        columnNumber: 5
+    }, undefined);
+};
+_s(SetEmailView, "3MwB921xuq6NUE/X3ls+PyHFL94=");
+_c = SetEmailView;
+var _c;
+$RefreshReg$(_c, "SetEmailView");
+
+  $parcel$ReactRefreshHelpers$b438.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react":"21dqq","./setting-view.scss":"g0BYC","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"g0BYC":[function() {},{}],"1jY5c":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7d61 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7d61.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SetPwView", ()=>SetPwView);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactBootstrap = require("react-bootstrap");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _settingViewScss = require("./setting-view.scss");
+var _s = $RefreshSig$();
+const SetPwView = ({ user, token, setUser })=>{
+    _s();
+    // console.log("User: ", user.username);
+    // console.log("token: ", token);
+    // console.log("setuser: ", setUser);
+    const [Password, setPassword] = (0, _react.useState)("");
+    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
+    const handleSubmit = (event)=>{
+        event.preventDefault();
+        if (ControlPassword === Password) {
+            const data = {
+                username: user.username,
+                password: Password,
+                email: user.email,
+                birthday: user.birthday
+            };
+            // console.log("birthday", data);
+            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                }
+            }).then((response)=>{
+                // console.log("RESPONSE: ", response.json()); // why not logged in console?
+                return response.json();
+            }).then((data)=>{
+                console.log("Update response: " + data);
+                if (data) {
+                    localStorage.setItem("user", JSON.stringify(data));
+                    setUser(data);
+                    alert("Successfully updated!");
+                } else {
+                    console.log("data: ", data);
+                    alert("user in current session not yet locally updated");
+                }
+            }).catch((e)=>{
+                console.log("error, ", e);
+                alert("Something went wrong.");
+            });
+        } else {
+            alert("Entered Passwords weren't identical.");
+            return;
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
+            onSubmit: handleSubmit,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
+                        controlId: "formBasicEmail",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "New Password:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-pw-view.jsx",
+                                lineNumber: 66,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Password,
+                                onChange: (e)=>setPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-pw-view.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Please confirm new Password:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-pw-view.jsx",
+                                lineNumber: 73,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: ControlPassword,
+                                onChange: (e)=>setControlPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-pw-view.jsx",
+                                lineNumber: 76,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/setting-view/setting-pw-view.jsx",
+                        lineNumber: 65,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-pw-view.jsx",
+                    lineNumber: 64,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        className: "text-dark btn-lg border-dark hover-effect",
+                        type: "submit",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/setting-view/setting-pw-view.jsx",
+                        lineNumber: 85,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-pw-view.jsx",
+                    lineNumber: 84,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/setting-view/setting-pw-view.jsx",
+            lineNumber: 63,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/setting-view/setting-pw-view.jsx",
+        lineNumber: 62,
+        columnNumber: 5
+    }, undefined);
+};
+_s(SetPwView, "V2pr8EaSzzsSHDTJZ5yG3yeaz60=");
+_c = SetPwView;
+var _c;
+$RefreshReg$(_c, "SetPwView");
+
+  $parcel$ReactRefreshHelpers$7d61.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react":"21dqq","./setting-view.scss":"g0BYC","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"g0BYC":[function() {},{}],"cZPih":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2b83 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2b83.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SetNameView", ()=>SetNameView);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactBootstrap = require("react-bootstrap");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _settingViewScss = require("./setting-view.scss");
+var _s = $RefreshSig$();
+const SetNameView = ({ user, token, setUser })=>{
+    _s();
+    // console.log("User: ", user.username);
+    // console.log("token: ", token);
+    // console.log("setuser: ", setUser);
+    const [Username, setUsername] = (0, _react.useState)(user.username);
+    const [Password, setPassword] = (0, _react.useState)("");
+    const [ControlPassword, setControlPassword] = (0, _react.useState)("");
+    const handleSubmit = (event)=>{
+        event.preventDefault();
+        if (ControlPassword === Password) {
+            const data = {
+                username: Username,
+                password: Password,
+                email: user.email,
+                birthday: user.birthday
+            };
+            // console.log("birthday", data);
+            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+                method: "PUT",
+                body: JSON.stringify(data),
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                }
+            }).then((response)=>{
+                // console.log("RESPONSE: ", response.json()); // why not logged in console?
+                return response.json();
+            }).then((data)=>{
+                console.log("Update response: " + data);
+                if (data) {
+                    localStorage.setItem("user", JSON.stringify(data));
+                    setUser(data);
+                    alert("Successfully updated!");
+                } else {
+                    console.log("data: ", data);
+                    alert("user in current session not yet locally updated");
+                }
+            }).catch((e)=>{
+                console.log("error, ", e);
+                alert("Something went wrong.");
+            });
+        } else {
+            alert("Entered Passwords weren't identical.");
+            return;
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form), {
+            onSubmit: handleSubmit,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
+                        controlId: "formBasicEmail",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Enter new username here:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 67,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Username,
+                                placeholder: user.username,
+                                onChange: (e)=>setUsername(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 70,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 77,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: Password,
+                                onChange: (e)=>setPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 78,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
+                                className: "mt-5 mb-5",
+                                children: "Password confirm:"
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 84,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
+                                type: "text",
+                                value: ControlPassword,
+                                onChange: (e)=>setControlPassword(e.target.value),
+                                required: true
+                            }, void 0, false, {
+                                fileName: "src/components/setting-view/setting-name-view.jsx",
+                                lineNumber: 85,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/setting-view/setting-name-view.jsx",
+                        lineNumber: 66,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-name-view.jsx",
+                    lineNumber: 65,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
+                    className: "d-flex justify-content-center mt-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        className: "text-dark btn-lg border-dark hover-effect",
+                        type: "submit",
+                        children: "Submit"
+                    }, void 0, false, {
+                        fileName: "src/components/setting-view/setting-name-view.jsx",
+                        lineNumber: 94,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/setting-view/setting-name-view.jsx",
+                    lineNumber: 93,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/setting-view/setting-name-view.jsx",
+            lineNumber: 64,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/setting-view/setting-name-view.jsx",
+        lineNumber: 63,
+        columnNumber: 5
+    }, undefined);
+};
+_s(SetNameView, "9067hWRl5yVs4PFGfDqAZhTpxFY=");
+_c = SetNameView;
+var _c;
+$RefreshReg$(_c, "SetNameView");
+
+  $parcel$ReactRefreshHelpers$2b83.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-bootstrap":"3AD9A","react":"21dqq","./setting-view.scss":"g0BYC","@parcel/transformer-js/src/esmodule-helpers.js":"7Rzro","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4yKoC"}],"g0BYC":[function() {},{}]},["ftGig","gYaYa","d8Dch"], "d8Dch", "parcelRequireaec4")
 
 //# sourceMappingURL=index.b4b6dfad.js.map

@@ -13222,14 +13222,14 @@ Button.hover-effect:hover {
   transition: transform .2s ease-in-out;
 }
 
+Button {
+  width: 100%;
+}
+
 Button.hover-effect:hover {
   opacity: .9;
   background-color: #98fb98;
   transition: transform .2s ease-in-out;
-}
-
-Button {
-  width: 100%;
 }
 
 Button.hover-effect:hover {
