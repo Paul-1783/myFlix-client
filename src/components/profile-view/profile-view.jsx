@@ -23,10 +23,14 @@ export const ProfileView = ({
 
   useEffect(() => {
     const loadFavorites = () => {
-      return (favoriteMovies = movies.filter((m) => favMovies.includes(m.Id)));
+      return (favoriteMovies = movies.filter((m) =>
+        user.favorite_movies.includes(m.Id)
+      ));
     };
     setObjectsofFavMovies(loadFavorites());
-  }, []);
+  }, [user.favorite_movies]);
+
+  // useEffect(() => {}, [objsOfFavMovies]);
 
   return (
     <>
@@ -59,7 +63,7 @@ export const ProfileView = ({
             <div className="fw-bold bg-warning text-primary fs-2 rounded">
               Birthday:
             </div>
-            {user.birthdate}
+            {user.birthday.substring(0, user.birthday.indexOf("T"))}
           </div>
           <Link
             to={`/setting/birthday`}

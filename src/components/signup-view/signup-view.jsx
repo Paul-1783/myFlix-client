@@ -27,6 +27,7 @@ export const SignupView = ({ onSignedUp }) => {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
+        console.log("birthday: ", response.birthday);
         alert("Signup successfull");
         window.location.reload();
       } else {
@@ -70,9 +71,6 @@ export const SignupView = ({ onSignedUp }) => {
           type="date"
           value={birthday}
           onChange={(e) => {
-            console.log("BEFORE: ", typeof e.target.value);
-            let dummi = new Date(e.target.value);
-            console.log("AFTER: ", dummi);
             setBirthday(e.target.value);
           }}
           required

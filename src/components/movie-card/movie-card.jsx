@@ -1,17 +1,13 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const MovieCard = ({
-  setFavMovies,
-  token,
-  user,
-  movie,
-  addable,
-  favMovies,
-  setUser,
-}) => {
+export const MovieCard = ({ token, user, movie, addable, setUser }) => {
+  const [favMovies, setFavMovies] = useState(user.favorite_movies);
+
   const addNewFavoriteMovie = () => {
+    console.log("FAVMOVIES: ", favMovies);
     if (!favMovies.includes(movie.Id)) {
       fetch(
         `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
@@ -35,10 +31,10 @@ export const MovieCard = ({
         .then((data) => {
           if (data) {
             localStorage.setItem("user", JSON.stringify(data));
-            setUser(user);
+            setUser(data);
             console.log(data);
             setFavMovies(data.favorite_movies);
-            console.log("MovieCard " + favMovies);
+            console.log("MovieCard: " + favMovies);
             alert("Movie successfully added to your list of favorites.");
           }
         });
@@ -46,8 +42,10 @@ export const MovieCard = ({
       alert("Movie is already in your list of favorites");
     }
   };
+  console.log("MovieCard 2: " + favMovies);
 
   const removeFromFavoriteList = () => {
+    console.log("FavMovies in Remove: ", favMovies);
     if (favMovies.includes(movie.Id)) {
       fetch(
         `https://myflicsdb3.onrender.com/users/${user.username}/movies/${movie.Id}`,
@@ -70,14 +68,18 @@ export const MovieCard = ({
           }
         })
         .then((data) => {
-          // localStorage.setItem("user", JSON.stringify(data));
-          // setUser(data);
-          console.log("DATA MOVIECARD: " + data);
-          // setFavMovies(data.user.favorite_movies);
+          localStorage.setItem("user", JSON.stringify(data));
+          setUser(data);
+          console.log("DATA MOVIECARD: " + data.favorite_movies);
+          // setFavMovies(data.favorite_movies);
           console.log("MovieCard " + favMovies);
           window.location.reload();
           alert("Movie successfully removed from your list of favorites.");
         });
+      // console.log("MOVIE.Id: ", movie.Id);
+      // const favMoviesNew = favMovies.filter((fav) => fav.Id === movie.Id);
+      // console.log("favMoviesNew: ", favMoviesNew);
+      // setFavMovies(favMoviesNew);
     } else {
       alert("Movie is not in your list of favorites");
     }
