@@ -6,7 +6,7 @@ export const SignupView = ({ onSignedUp }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [birthday, setBirthday] = useState("");
+  const [birthday, setBirthday] = useState(new Date());
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,7 +15,8 @@ export const SignupView = ({ onSignedUp }) => {
       username: username,
       password: password,
       email: email,
-      birtdhay: birthday,
+      birthday: birthday,
+      // date_added: { $date: "2014-01-22T14:56:59.301Z" },
     };
 
     fetch("https://myflicsdb3.onrender.com/users", {
@@ -26,6 +27,7 @@ export const SignupView = ({ onSignedUp }) => {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
+        console.log("birthday: ", response.birthday);
         alert("Signup successfull");
         window.location.reload();
       } else {
@@ -68,7 +70,9 @@ export const SignupView = ({ onSignedUp }) => {
         <Form.Control
           type="date"
           value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
+          onChange={(e) => {
+            setBirthday(e.target.value);
+          }}
           required
         />
       </Form.Group>
