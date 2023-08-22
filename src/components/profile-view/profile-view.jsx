@@ -23,9 +23,7 @@ export const ProfileView = ({
 
   useEffect(() => {
     const loadFavorites = () => {
-      return (favoriteMovies = movies.filter((m) =>
-        user.favorite_movies.includes(m.Id)
-      ));
+      return movies.filter((m) => user.favorite_movies.includes(m.Id));
     };
     setObjectsofFavMovies(loadFavorites());
   }, [user.favorite_movies]);
