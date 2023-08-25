@@ -16,7 +16,6 @@ export const SignupView = ({ onSignedUp }) => {
       password: password,
       email: email,
       birthday: birthday,
-      // date_added: { $date: "2014-01-22T14:56:59.301Z" },
     };
 
     fetch("https://myflicsdb3.onrender.com/users", {
@@ -27,8 +26,7 @@ export const SignupView = ({ onSignedUp }) => {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
-        console.log("birthday: ", response.birthday);
-        alert("Signup successfull");
+        alert("Signup successful");
         window.location.reload();
       } else {
         alert("Signup failed");

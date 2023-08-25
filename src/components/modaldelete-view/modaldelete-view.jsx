@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 export const DeleteModal = ({
-  deleteAll,
   user,
   token,
   setUser,
@@ -16,7 +15,6 @@ export const DeleteModal = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleDelete = () => {
-    console.log(user.username);
     fetch(
       `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
         user.username
@@ -30,12 +28,12 @@ export const DeleteModal = ({
       }
     ).then((response) => {
       if (response.ok) {
-        console.log("User successfully removed from database.");
         //call logout function
         setUser(null);
         setToken(null);
         setFavMovies([]);
         localStorage.clear();
+        alert("User successfully removed from database.");
         return response.json();
       } else {
         alert("Couldn't remove user from database. " + response.status);
@@ -73,7 +71,7 @@ export const DeleteModal = ({
           <Button
             variant="primary"
             className="text-dark"
-            onClick={({ deleteAll }, handleDelete)}
+            onClick={handleDelete}
           >
             Yes I do
           </Button>

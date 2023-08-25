@@ -24,6 +24,42 @@ export const MainView = () => {
     storedUser ? storedUser.favorite_movies : []
   );
 
+  const [filteredMovies, setFilteredMovies] = useState([]);
+  const [category, setCategory] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    setFilteredMovies(movies);
+  }, [movies]);
+
+  useEffect(() => {
+    const filteredByCat = movies.filter((movie) => {
+      return movie.GenreName.toLowerCase() === category.toLowerCase();
+    });
+    if (filteredByCat.length > 0) setFilteredMovies(filteredByCat);
+    else setFilteredMovies(movies);
+  }, [category]);
+
+  useEffect(() => {
+    if (searchTerm.length === 0) {
+      setFilteredMovies(movies);
+      return;
+    }
+    if (category === "non_selected") {
+      setFilteredMovies(handleSearch(movies));
+    } else {
+      setFilteredMovies(handleSearch(filteredMovies));
+    }
+  }, [searchTerm]);
+
+  const handleSearch = (list) =>
+    list.filter((movie) => {
+      return (
+        movie.Title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        movie.GenreName.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+
   useEffect(() => {
     if (!token) {
       return;
@@ -50,7 +86,6 @@ export const MainView = () => {
             Actors: doc.Actors,
           };
         });
-
         setMovies(moviesFromApi);
       })
       .catch(console.log());
@@ -61,6 +96,10 @@ export const MainView = () => {
       <Row className="justify-content-md-center">
         <NavigationFlixClient
           user={user}
+          category={category}
+          setCategory={(e) => setCategory(e)}
+          query={searchTerm}
+          setSearchQuery={(e) => setSearchTerm(e)}
           onLoggedOut={() => {
             setUser(null);
             setToken(null);
@@ -73,31 +112,13 @@ export const MainView = () => {
         </Row>
         <Routes>
           <Route
-            path="/signup"
-            element={
-              user ? (
-                <Navigate to="/" />
-              ) : (
-                <>
-                  <Col md="4">
-                    <HeadingView
-                      marginVar="mb-5"
-                      title="MyFlix Movie Database"
-                    />
-                    <HeadingView title="Signup" />
-                    <SignupView onSignedUp={(user) => setUser(user)} />
-                  </Col>
-                </>
-              )
-            }
-          />
-          <Route
             path="/login"
             element={
               user ? (
                 <Navigate to="/" />
               ) : (
                 <>
+                  <Col className="mt-5"></Col>
                   <Col md="4">
                     <HeadingView
                       marginVar="mb-5 mt-3"
@@ -112,6 +133,25 @@ export const MainView = () => {
                         console.log("IN MAIN: " + favMovies);
                       }}
                     />
+                  </Col>
+                </>
+              )
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              user ? (
+                <Navigate to="/" />
+              ) : (
+                <>
+                  <Col md="4">
+                    <HeadingView
+                      marginVar="mb-5"
+                      title="MyFlix Movie Database"
+                    />
+                    <HeadingView title="Signup" />
+                    <SignupView onSignedUp={(user) => setUser(user)} />
                   </Col>
                 </>
               )
@@ -139,10 +179,10 @@ export const MainView = () => {
               <>
                 {!user ? (
                   <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
+                ) : filteredMovies.length === 0 ? (
                   <Col>The List is empty.</Col>
                 ) : (
-                  movies.map((movie) => (
+                  filteredMovies.map((movie) => (
                     <Col md={2} className="mb-5" key={movie.Id}>
                       <MovieCard
                         setFavMovies={setFavMovies}
@@ -168,7 +208,6 @@ export const MainView = () => {
                 ) : (
                   <ProfileView
                     token={token}
-                    favMovies={favMovies}
                     setFavMovies={setFavMovies}
                     user={user}
                     setUser={setUser}

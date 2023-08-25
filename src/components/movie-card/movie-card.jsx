@@ -42,7 +42,6 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
       alert("Movie is already in your list of favorites");
     }
   };
-  console.log("MovieCard 2: " + favMovies);
 
   const removeFromFavoriteList = () => {
     console.log("FavMovies in Remove: ", favMovies);
@@ -64,22 +63,16 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
           } else {
             console.log("STATUS: " + response.status);
             alert("Couldn't remove movie from list.");
-            return; //how to abort before 'then' is called?
+            return;
           }
         })
         .then((data) => {
           localStorage.setItem("user", JSON.stringify(data));
           setUser(data);
-          console.log("DATA MOVIECARD: " + data.favorite_movies);
-          // setFavMovies(data.favorite_movies);
           console.log("MovieCard " + favMovies);
           window.location.reload();
           alert("Movie successfully removed from your list of favorites.");
         });
-      // console.log("MOVIE.Id: ", movie.Id);
-      // const favMoviesNew = favMovies.filter((fav) => fav.Id === movie.Id);
-      // console.log("favMoviesNew: ", favMoviesNew);
-      // setFavMovies(favMoviesNew);
     } else {
       alert("Movie is not in your list of favorites");
     }

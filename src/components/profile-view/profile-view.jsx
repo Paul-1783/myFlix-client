@@ -10,14 +10,12 @@ import { Button } from "react-bootstrap";
 import "./profile-view.scss";
 
 export const ProfileView = ({
-  favMovies,
   user,
   movies,
   setFavMovies,
   token,
   setUser,
   setToken,
-  onLoggedOut,
 }) => {
   const [objsOfFavMovies, setObjectsofFavMovies] = useState([]);
 
@@ -27,8 +25,6 @@ export const ProfileView = ({
     };
     setObjectsofFavMovies(loadFavorites());
   }, [user.favorite_movies]);
-
-  // useEffect(() => {}, [objsOfFavMovies]);
 
   return (
     <>
@@ -107,7 +103,6 @@ export const ProfileView = ({
           </Link>
         </ListGroup.Item>
         <DeleteModal
-          deleteAll={onLoggedOut}
           user={user}
           token={token}
           setUser={setUser}
@@ -127,10 +122,8 @@ export const ProfileView = ({
           <MovieCard
             movie={movie}
             active={false}
-            setFavMovies={setFavMovies}
             token={token}
             user={user}
-            favMovies={favMovies}
             setUser={setUser}
           />
         </Col>

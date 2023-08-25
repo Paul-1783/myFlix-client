@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import "./setting-view.scss";
 
 export const SetEmailView = ({ user, token, setUser }) => {
-  // console.log("User: ", user.username);
-  // console.log("token: ", token);
-  // console.log("setuser: ", setUser);
   const [Email, setEmail] = useState(user.email);
   const [Password, setPassword] = useState("");
   const [ControlPassword, setControlPassword] = useState("");
@@ -20,7 +17,6 @@ export const SetEmailView = ({ user, token, setUser }) => {
         email: Email,
         birthday: user.birthday,
       };
-      // console.log("birthday", data);
       fetch(
         `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
           user.username
@@ -35,7 +31,6 @@ export const SetEmailView = ({ user, token, setUser }) => {
         }
       )
         .then((response) => {
-          // console.log("RESPONSE: ", response.json()); // why not logged in console?
           return response.json();
         })
         .then((data) => {
