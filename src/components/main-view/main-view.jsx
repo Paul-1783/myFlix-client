@@ -108,7 +108,7 @@ export const MainView = () => {
           }}
         />
         <Row className="mt-5">
-          <Col className="mt-5"></Col>
+          <Col className="mt-5 "></Col>
         </Row>
         <Routes>
           <Route
