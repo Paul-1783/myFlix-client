@@ -122,7 +122,7 @@ export const MainView = () => {
                   <Col md="4">
                     <HeadingView
                       marginVar="mb-5 mt-3"
-                      title="MyFlix Movie Database WWWWWWWWWWWWW"
+                      title="MyFlix Movie Database"
                     />
                     <HeadingView title="Login" />
                     <LoginView
