@@ -14,7 +14,7 @@ export const LoginView = ({ onLoggedIn }) => {
       password: password,
     };
 
-    fetch("https://myflicsdb3.onrender.com/login", {
+    fetch("54.147.33.177/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

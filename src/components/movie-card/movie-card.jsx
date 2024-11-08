@@ -10,7 +10,7 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
     console.log("FAVMOVIES: ", favMovies);
     if (!favMovies.includes(movie.Id)) {
       fetch(
-        `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
+        `54.147.33.177/users/${encodeURIComponent(
           user.username
         )}/movies/${encodeURIComponent(movie.Id)}`,
         {
@@ -46,16 +46,13 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
   const removeFromFavoriteList = () => {
     console.log("FavMovies in Remove: ", favMovies);
     if (favMovies.includes(movie.Id)) {
-      fetch(
-        `https://myflicsdb3.onrender.com/users/${user.username}/movies/${movie.Id}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      fetch(`54.147.33.177/users/${user.username}/movies/${movie.Id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      })
         .then((response) => {
           if (response.ok) {
             console.log("STATUS: " + response.status);

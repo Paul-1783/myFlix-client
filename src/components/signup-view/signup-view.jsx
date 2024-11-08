@@ -18,7 +18,7 @@ export const SignupView = ({ onSignedUp }) => {
       birthday: birthday,
     };
 
-    fetch("https://myflicsdb3.onrender.com/users", {
+    fetch("54.147.33.177/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -65,7 +65,7 @@ export const MainView = () => {
       return;
     }
 
-    fetch("https://myflicsdb3.onrender.com/movies", {
+    fetch("54.147.33.177/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())

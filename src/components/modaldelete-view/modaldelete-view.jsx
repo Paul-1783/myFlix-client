@@ -15,18 +15,13 @@ export const DeleteModal = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleDelete = () => {
-    fetch(
-      `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
-        user.username
-      )}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    ).then((response) => {
+    fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }).then((response) => {
       if (response.ok) {
         //call logout function
         setUser(null);

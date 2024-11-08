@@ -27306,7 +27306,7 @@ const MainView = ()=>{
         });
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("https://myflicsdb3.onrender.com/movies", {
+        fetch("54.147.33.177/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27354,7 +27354,7 @@ const MainView = ()=>{
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rowDefault.default), {
                     className: "mt-5",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                        className: "mt-5"
+                        className: "mt-5 "
                     }, void 0, false, {
                         fileName: "src/components/main-view/main-view.jsx",
                         lineNumber: 111,
@@ -27764,7 +27764,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     const [favMovies, setFavMovies] = (0, _react.useState)(user.favorite_movies);
     const addNewFavoriteMovie = ()=>{
         console.log("FAVMOVIES: ", favMovies);
-        if (!favMovies.includes(movie.Id)) fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
+        if (!favMovies.includes(movie.Id)) fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -27789,7 +27789,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     };
     const removeFromFavoriteList = ()=>{
         console.log("FavMovies in Remove: ", favMovies);
-        if (favMovies.includes(movie.Id)) fetch(`https://myflicsdb3.onrender.com/users/${user.username}/movies/${movie.Id}`, {
+        if (favMovies.includes(movie.Id)) fetch(`54.147.33.177/users/${user.username}/movies/${movie.Id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -27821,25 +27821,25 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
                 className: "h-100 w-100"
             }, void 0, false, {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 83,
+                lineNumber: 80,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Title, {}, void 0, false, {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 85,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {}, void 0, false, {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 86,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 84,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27849,12 +27849,12 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
                     children: movie.Title
                 }, void 0, false, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 89,
+                    lineNumber: 86,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 88,
+                lineNumber: 85,
                 columnNumber: 7
             }, undefined),
             addable ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27869,12 +27869,12 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 95,
+                    lineNumber: 92,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 94,
+                lineNumber: 91,
                 columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 to: `/profile`,
@@ -27888,18 +27888,18 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 104,
+                    lineNumber: 101,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 103,
+                lineNumber: 100,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/movie-card/movie-card.jsx",
-        lineNumber: 82,
+        lineNumber: 79,
         columnNumber: 5
     }, undefined);
 };
@@ -43176,7 +43176,9 @@ var _badge = require("react-bootstrap/Badge");
 var _badgeDefault = parcelHelpers.interopDefault(_badge);
 function HeadingView({ marginVar, title }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: marginVar,
+        className: {
+            marginVar
+        },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _badgeDefault.default), {
                 className: "",
@@ -43452,7 +43454,7 @@ const LoginView = ({ onLoggedIn })=>{
             username: username,
             password: password
         };
-        fetch("https://myflicsdb3.onrender.com/login", {
+        fetch("54.147.33.177/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43581,7 +43583,7 @@ const SignupView = ({ onSignedUp })=>{
             email: email,
             birthday: birthday
         };
-        fetch("https://myflicsdb3.onrender.com/users", {
+        fetch("54.147.33.177/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44261,7 +44263,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
     const handleClose = ()=>setShow(false);
     const handleShow = ()=>setShow(true);
     const handleDelete = ()=>{
-        fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+        fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -44292,7 +44294,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
                 children: "Delete Profile"
             }, void 0, false, {
                 fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                lineNumber: 48,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _modalDefault.default), {
@@ -44308,12 +44310,12 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
                             children: "Delete Profile"
                         }, void 0, false, {
                             fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                            lineNumber: 58,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                        lineNumber: 57,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _modalDefault.default).Body, {
@@ -44321,7 +44323,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
                         children: "Do you really want to delete this profile?"
                     }, void 0, false, {
                         fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                        lineNumber: 60,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _modalDefault.default).Footer, {
@@ -44333,7 +44335,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
                                 children: "I changed my mind"
                             }, void 0, false, {
                                 fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                                lineNumber: 64,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -44343,19 +44345,19 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
                                 children: "Yes I do"
                             }, void 0, false, {
                                 fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                                lineNumber: 71,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                        lineNumber: 63,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/modaldelete-view/modaldelete-view.jsx",
-                lineNumber: 56,
+                lineNumber: 51,
                 columnNumber: 7
             }, undefined)
         ]
