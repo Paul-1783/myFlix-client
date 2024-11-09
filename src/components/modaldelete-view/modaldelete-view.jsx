@@ -15,7 +15,7 @@ export const DeleteModal = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleDelete = () => {
-    fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}`, {
+    fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

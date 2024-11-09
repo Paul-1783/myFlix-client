@@ -20,19 +20,14 @@ export const SetPwView = ({ user, token, setUser }) => {
         birthday: user.birthday,
       };
       // console.log("birthday", data);
-      fetch(
-        `https://myflicsdb3.onrender.com/users/${encodeURIComponent(
-          user.username
-        )}`,
-        {
-          method: "PUT",
-          body: JSON.stringify(data),
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      fetch(`54.89.226.155/${encodeURIComponent(user.username)}`, {
+        method: "PUT",
+        body: JSON.stringify(data),
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      })
         .then((response) => {
           // console.log("RESPONSE: ", response.json()); // why not logged in console?
           return response.json();

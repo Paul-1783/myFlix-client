@@ -27306,7 +27306,7 @@ const MainView = ()=>{
         });
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("54.147.33.177/movies", {
+        fetch("54.89.226.155/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27764,7 +27764,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     const [favMovies, setFavMovies] = (0, _react.useState)(user.favorite_movies);
     const addNewFavoriteMovie = ()=>{
         console.log("FAVMOVIES: ", favMovies);
-        if (!favMovies.includes(movie.Id)) fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
+        if (!favMovies.includes(movie.Id)) fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -27789,7 +27789,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     };
     const removeFromFavoriteList = ()=>{
         console.log("FavMovies in Remove: ", favMovies);
-        if (favMovies.includes(movie.Id)) fetch(`54.147.33.177/users/${user.username}/movies/${movie.Id}`, {
+        if (favMovies.includes(movie.Id)) fetch(`54.89.226.155/users/${user.username}/movies/${movie.Id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -43454,7 +43454,7 @@ const LoginView = ({ onLoggedIn })=>{
             username: username,
             password: password
         };
-        fetch("54.147.33.177/login", {
+        fetch("54.89.226.155/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43583,7 +43583,7 @@ const SignupView = ({ onSignedUp })=>{
             email: email,
             birthday: birthday
         };
-        fetch("54.147.33.177/users", {
+        fetch("54.89.226.155/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44263,7 +44263,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
     const handleClose = ()=>setShow(false);
     const handleShow = ()=>setShow(true);
     const handleDelete = ()=>{
-        fetch(`54.147.33.177/users/${encodeURIComponent(user.username)}`, {
+        fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -44403,7 +44403,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                 email: user.email,
                 birthday: Birthday
             };
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44445,7 +44445,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 children: "Change date of birth here:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 62,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44456,7 +44456,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 65,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44464,7 +44464,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 children: "Password:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 72,
+                                lineNumber: 67,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44474,7 +44474,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 73,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44482,7 +44482,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 children: "Password confirm:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 79,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44492,18 +44492,18 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                                lineNumber: 80,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                        lineNumber: 61,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                    lineNumber: 60,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -44514,23 +44514,23 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                        lineNumber: 89,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-birthday-view.jsx",
-                    lineNumber: 88,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/setting-view/setting-birthday-view.jsx",
-            lineNumber: 59,
+            lineNumber: 54,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/setting-view/setting-birthday-view.jsx",
-        lineNumber: 58,
+        lineNumber: 53,
         columnNumber: 5
     }, undefined);
 };
@@ -44574,7 +44574,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                 email: Email,
                 birthday: user.birthday
             };
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44616,7 +44616,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 children: "Enter new Email here:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 62,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44627,7 +44627,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 63,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44635,7 +44635,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 children: "Password:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 70,
+                                lineNumber: 65,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44645,7 +44645,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 71,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44653,7 +44653,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 children: "Password confirm:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 77,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44663,18 +44663,18 @@ const SetEmailView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-email-view.jsx",
-                                lineNumber: 78,
+                                lineNumber: 73,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/setting-view/setting-email-view.jsx",
-                        lineNumber: 61,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-email-view.jsx",
-                    lineNumber: 60,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -44685,23 +44685,23 @@ const SetEmailView = ({ user, token, setUser })=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/setting-view/setting-email-view.jsx",
-                        lineNumber: 87,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-email-view.jsx",
-                    lineNumber: 86,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/setting-view/setting-email-view.jsx",
-            lineNumber: 59,
+            lineNumber: 54,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/setting-view/setting-email-view.jsx",
-        lineNumber: 58,
+        lineNumber: 53,
         columnNumber: 5
     }, undefined);
 };
@@ -44748,7 +44748,7 @@ const SetPwView = ({ user, token, setUser })=>{
                 birthday: user.birthday
             };
             // console.log("birthday", data);
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.89.226.155/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44791,7 +44791,7 @@ const SetPwView = ({ user, token, setUser })=>{
                                 children: "New Password:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 66,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44801,7 +44801,7 @@ const SetPwView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 67,
+                                lineNumber: 62,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44809,7 +44809,7 @@ const SetPwView = ({ user, token, setUser })=>{
                                 children: "Please confirm new Password:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 73,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44819,18 +44819,18 @@ const SetPwView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-pw-view.jsx",
-                                lineNumber: 76,
+                                lineNumber: 71,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/setting-view/setting-pw-view.jsx",
-                        lineNumber: 65,
+                        lineNumber: 60,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-pw-view.jsx",
-                    lineNumber: 64,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -44841,23 +44841,23 @@ const SetPwView = ({ user, token, setUser })=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/setting-view/setting-pw-view.jsx",
-                        lineNumber: 85,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-pw-view.jsx",
-                    lineNumber: 84,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/setting-view/setting-pw-view.jsx",
-            lineNumber: 63,
+            lineNumber: 58,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/setting-view/setting-pw-view.jsx",
-        lineNumber: 62,
+        lineNumber: 57,
         columnNumber: 5
     }, undefined);
 };
@@ -44901,7 +44901,7 @@ const SetNameView = ({ user, token, setUser })=>{
                 email: user.email,
                 birthday: user.birthday
             };
-            fetch(`https://myflicsdb3.onrender.com/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44943,7 +44943,7 @@ const SetNameView = ({ user, token, setUser })=>{
                                 children: "Enter new username here:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 62,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44954,7 +44954,7 @@ const SetNameView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 65,
+                                lineNumber: 60,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44962,7 +44962,7 @@ const SetNameView = ({ user, token, setUser })=>{
                                 children: "Password:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 72,
+                                lineNumber: 67,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44972,7 +44972,7 @@ const SetNameView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 73,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Label, {
@@ -44980,7 +44980,7 @@ const SetNameView = ({ user, token, setUser })=>{
                                 children: "Password confirm:"
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 79,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -44990,18 +44990,18 @@ const SetNameView = ({ user, token, setUser })=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "src/components/setting-view/setting-name-view.jsx",
-                                lineNumber: 80,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/setting-view/setting-name-view.jsx",
-                        lineNumber: 61,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-name-view.jsx",
-                    lineNumber: 60,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -45012,23 +45012,23 @@ const SetNameView = ({ user, token, setUser })=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/setting-view/setting-name-view.jsx",
-                        lineNumber: 89,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/setting-view/setting-name-view.jsx",
-                    lineNumber: 88,
+                    lineNumber: 83,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/setting-view/setting-name-view.jsx",
-            lineNumber: 59,
+            lineNumber: 54,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/setting-view/setting-name-view.jsx",
-        lineNumber: 58,
+        lineNumber: 53,
         columnNumber: 5
     }, undefined);
 };

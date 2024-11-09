@@ -65,7 +65,7 @@ export const MainView = () => {
       return;
     }
 
-    fetch("54.147.33.177/movies", {
+    fetch("54.89.226.155/movies", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => response.json())
