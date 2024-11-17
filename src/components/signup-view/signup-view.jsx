@@ -18,7 +18,7 @@ export const SignupView = ({ onSignedUp }) => {
       birthday: birthday,
     };
 
-    fetch("54.89.226.155/users", {
+    fetch("http://100.26.107.23/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

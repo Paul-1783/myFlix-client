@@ -27306,7 +27306,7 @@ const MainView = ()=>{
         });
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("54.89.226.155/movies", {
+        fetch("http://100.26.107.23/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27764,7 +27764,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     const [favMovies, setFavMovies] = (0, _react.useState)(user.favorite_movies);
     const addNewFavoriteMovie = ()=>{
         console.log("FAVMOVIES: ", favMovies);
-        if (!favMovies.includes(movie.Id)) fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
+        if (!favMovies.includes(movie.Id)) fetch(`http://100.26.107.23/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -27789,7 +27789,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     };
     const removeFromFavoriteList = ()=>{
         console.log("FavMovies in Remove: ", favMovies);
-        if (favMovies.includes(movie.Id)) fetch(`54.89.226.155/users/${user.username}/movies/${movie.Id}`, {
+        if (favMovies.includes(movie.Id)) fetch(`34.228.68.118/users/${user.username}/movies/${movie.Id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -43454,7 +43454,7 @@ const LoginView = ({ onLoggedIn })=>{
             username: username,
             password: password
         };
-        fetch("54.89.226.155/login", {
+        fetch("http://34.228.68.118/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43583,7 +43583,7 @@ const SignupView = ({ onSignedUp })=>{
             email: email,
             birthday: birthday
         };
-        fetch("54.89.226.155/users", {
+        fetch("http://100.26.107.23/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44263,7 +44263,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
     const handleClose = ()=>setShow(false);
     const handleShow = ()=>setShow(true);
     const handleDelete = ()=>{
-        fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
+        fetch(`http://100.26.107.23/users/${encodeURIComponent(user.username)}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
