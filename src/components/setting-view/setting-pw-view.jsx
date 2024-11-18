@@ -20,7 +20,7 @@ export const SetPwView = ({ user, token, setUser }) => {
         birthday: user.birthday,
       };
       // console.log("birthday", data);
-      fetch(`54.83.66.111/${encodeURIComponent(user.username)}`, {
+      fetch(`52.207.86.249/${encodeURIComponent(user.username)}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {

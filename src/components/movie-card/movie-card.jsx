@@ -10,7 +10,7 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
     console.log("FAVMOVIES: ", favMovies);
     if (!favMovies.includes(movie.Id)) {
       fetch(
-        `http://54.83.66.111/users/${encodeURIComponent(
+        `http://52.207.86.249/users/${encodeURIComponent(
           user.username
         )}/movies/${encodeURIComponent(movie.Id)}`,
         {
@@ -46,7 +46,7 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
   const removeFromFavoriteList = () => {
     console.log("FavMovies in Remove: ", favMovies);
     if (favMovies.includes(movie.Id)) {
-      fetch(`34.228.68.118/users/${user.username}/movies/${movie.Id}`, {
+      fetch(`52.207.86.249/users/${user.username}/movies/${movie.Id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
