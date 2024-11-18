@@ -27306,7 +27306,7 @@ const MainView = ()=>{
         });
     (0, _react.useEffect)(()=>{
         if (!token) return;
-        fetch("http://100.26.107.23/movies", {
+        fetch("http://54.83.66.111/movies", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -27764,7 +27764,7 @@ const MovieCard = ({ token, user, movie, addable, setUser })=>{
     const [favMovies, setFavMovies] = (0, _react.useState)(user.favorite_movies);
     const addNewFavoriteMovie = ()=>{
         console.log("FAVMOVIES: ", favMovies);
-        if (!favMovies.includes(movie.Id)) fetch(`http://100.26.107.23/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
+        if (!favMovies.includes(movie.Id)) fetch(`http://54.83.66.111/users/${encodeURIComponent(user.username)}/movies/${encodeURIComponent(movie.Id)}`, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${token}`
@@ -43454,7 +43454,7 @@ const LoginView = ({ onLoggedIn })=>{
             username: username,
             password: password
         };
-        fetch("http://34.228.68.118/login", {
+        fetch("http://54.83.66.111/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -43583,7 +43583,7 @@ const SignupView = ({ onSignedUp })=>{
             email: email,
             birthday: birthday
         };
-        fetch("http://100.26.107.23/users", {
+        fetch("http://54.83.66.111/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44263,7 +44263,7 @@ const DeleteModal = ({ user, token, setUser, setToken, setFavMovies })=>{
     const handleClose = ()=>setShow(false);
     const handleShow = ()=>setShow(true);
     const handleDelete = ()=>{
-        fetch(`http://100.26.107.23/users/${encodeURIComponent(user.username)}`, {
+        fetch(`http://54.83.66.111/users/${encodeURIComponent(user.username)}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -44403,7 +44403,7 @@ const SetBirthdayView = ({ user, token, setUser })=>{
                 email: user.email,
                 birthday: Birthday
             };
-            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.83.66.111/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44574,7 +44574,7 @@ const SetEmailView = ({ user, token, setUser })=>{
                 email: Email,
                 birthday: user.birthday
             };
-            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.83.66.111/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44748,7 +44748,7 @@ const SetPwView = ({ user, token, setUser })=>{
                 birthday: user.birthday
             };
             // console.log("birthday", data);
-            fetch(`54.89.226.155/${encodeURIComponent(user.username)}`, {
+            fetch(`54.83.66.111/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
@@ -44901,7 +44901,7 @@ const SetNameView = ({ user, token, setUser })=>{
                 email: user.email,
                 birthday: user.birthday
             };
-            fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
+            fetch(`54.83.66.111/users/${encodeURIComponent(user.username)}`, {
                 method: "PUT",
                 body: JSON.stringify(data),
                 headers: {

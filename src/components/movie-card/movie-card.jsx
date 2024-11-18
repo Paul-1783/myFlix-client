@@ -10,7 +10,7 @@ export const MovieCard = ({ token, user, movie, addable, setUser }) => {
     console.log("FAVMOVIES: ", favMovies);
     if (!favMovies.includes(movie.Id)) {
       fetch(
-        `http://100.26.107.23/users/${encodeURIComponent(
+        `http://54.83.66.111/users/${encodeURIComponent(
           user.username
         )}/movies/${encodeURIComponent(movie.Id)}`,
         {

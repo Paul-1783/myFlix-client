@@ -17,7 +17,7 @@ export const SetBirthdayView = ({ user, token, setUser }) => {
         email: user.email,
         birthday: Birthday,
       };
-      fetch(`54.89.226.155/users/${encodeURIComponent(user.username)}`, {
+      fetch(`54.83.66.111/users/${encodeURIComponent(user.username)}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {
